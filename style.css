@@ -1,29 +1,139 @@
-body {
-    font-family: Arial;
-    text-align: center;
-    background-color: #f4f4f4;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
-.container {
-    background: white;
-    width: 300px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
+body{
+    background:#f4f6fb;
+    display:flex;
+    justify-content:center;
+    padding:40px;
 }
 
-input {
-    width: 80%;
-    margin: 5px;
-    padding: 5px;
+.container{
+    width:420px;
+    max-width:100%;
 }
 
-button {
-    padding: 5px 10px;
-    cursor: pointer;
+.title{
+    text-align:center;
+    margin-bottom:10px;
+    color:#333;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+.info{
+    text-align:center;
+    color:#777;
+    margin-bottom:15px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.balance-card{
+    text-align:center;
+}
+
+.summary{
+    display:flex;
+    gap:15px;
+}
+
+.summary .card{
+    flex:1;
+    text-align:center;
+}
+
+.income p{
+    color:green;
+    font-weight:bold;
+}
+
+.expense p{
+    color:red;
+    font-weight:bold;
+}
+
+#list{
+    list-style:none;
+}
+
+#list li{
+    background:#fafafa;
+    padding:10px;
+    margin:8px 0;
+    border-radius:8px;
+    display:flex;
+    justify-content:space-between;
+    border-right:5px solid;
+}
+
+#list li.plus{
+    border-color:green;
+}
+
+#list li.minus{
+    border-color:red;
+}
+
+.delete-btn{
+    background:red;
+    border:none;
+    color:white;
+    padding:3px 8px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border-radius:8px;
+    border:1px solid #ddd;
+}
+
+.btn{
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#4c6ef5;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#3b5bdb;
+}
+
+.clear-btn{
+    width:100%;
+    padding:10px;
+    background:#ff6b6b;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.footer{
+    text-align:center;
+    color:#888;
+    margin-top:10px;
+}
+
+/* Responsive */
+@media(max-width:500px){
+    .summary{
+        flex-direction:column;
+    }
 }
